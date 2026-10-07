@@ -1,0 +1,22 @@
+# One-command local PostgreSQL for FraudGraph:   docker compose up -d
+# Matches the default DATABASE_URL in app/config.py and .env.example.
+services:
+  db:
+    image: postgres:16
+    container_name: fraudgraph-db
+    environment:
+      POSTGRES_USER: fraudgraph
+      POSTGRES_PASSWORD: fraudgraph
+      POSTGRES_DB: fraudgraph
+    ports:
+      - "5432:5432"
+    volumes:
+      - fraudgraph-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fraudgraph -d fraudgraph"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  fraudgraph-pgdata:

@@ -1,0 +1,28 @@
+# Virtual environments
+.venv/
+venv/
+backend/.venv/
+
+# Environment variables
+.env
+backend/.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Database
+*.db
+*.sqlite3
+
+# Distribution / Model artifacts
+*.joblib
+*.pkl
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
