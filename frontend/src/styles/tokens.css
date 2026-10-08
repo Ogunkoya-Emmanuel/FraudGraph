@@ -1,0 +1,104 @@
+:root {
+  /* Ink: a marine blue-grey scale used for text, lines and the two dark surfaces */
+  --ink-950: #0a1a2c;
+  --ink-900: #11263d;
+  --ink-800: #1a3550;
+  --ink-700: #2f4a66;
+  --ink-600: #4a647e;
+  --ink-500: #667f97;
+  --ink-400: #8ea1b4;
+  --ink-300: #b6c3d0;
+  --ink-200: #d8e0e8;
+  --ink-100: #e8edf2;
+  --ink-50: #f1f4f8;
+  --paper: #f5f7fa;
+  --surface: #ffffff;
+
+  --primary: #0c63b8;
+  --primary-hover: #0a529a;
+  --primary-soft: #e3eefa;
+  --primary-ink: #0a4a8a;
+
+  /* Risk spectrum: the colour language of the whole product */
+  --risk-low: #14976f;
+  --risk-low-bg: #e1f4ed;
+  --risk-low-ink: #0b6e50;
+  --risk-medium: #f0a81a;
+  --risk-medium-bg: #fff1cd;
+  --risk-medium-ink: #85580a;
+  --risk-high: #e2531f;
+  --risk-high-bg: #ffe5d9;
+  --risk-high-ink: #a93a0e;
+  --risk-critical: #be1d4a;
+  --risk-critical-bg: #fce0e8;
+  --risk-critical-ink: #94123a;
+
+  /* Workflow status */
+  --st-new: #0c63b8;
+  --st-new-bg: #e3eefa;
+  --st-investigating: #6a4fd1;
+  --st-investigating-bg: #ece8fa;
+  --st-confirmed: #94123a;
+  --st-confirmed-bg: #fce0e8;
+  --st-false: #0b6e50;
+  --st-false-bg: #e1f4ed;
+  --st-closed: #4a647e;
+  --st-closed-bg: #e8edf2;
+
+  --line: #dde4eb;
+  --line-strong: #c6d1dc;
+
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 14px;
+
+  --shadow-pop: 0 18px 48px -12px rgba(10, 26, 44, 0.35), 0 2px 6px rgba(10, 26, 44, 0.12);
+
+  --font-ui: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  --topbar-h: 60px;
+  --page-max: 1360px;
+}
+
+[data-risk='low'] {
+  --risk: var(--risk-low);
+  --risk-bg: var(--risk-low-bg);
+  --risk-ink: var(--risk-low-ink);
+}
+[data-risk='medium'] {
+  --risk: var(--risk-medium);
+  --risk-bg: var(--risk-medium-bg);
+  --risk-ink: var(--risk-medium-ink);
+}
+[data-risk='high'] {
+  --risk: var(--risk-high);
+  --risk-bg: var(--risk-high-bg);
+  --risk-ink: var(--risk-high-ink);
+}
+[data-risk='critical'] {
+  --risk: var(--risk-critical);
+  --risk-bg: var(--risk-critical-bg);
+  --risk-ink: var(--risk-critical-ink);
+}
+
+[data-status='new'] {
+  --st: var(--st-new);
+  --st-bg: var(--st-new-bg);
+}
+[data-status='investigating'] {
+  --st: var(--st-investigating);
+  --st-bg: var(--st-investigating-bg);
+}
+[data-status='confirmed'] {
+  --st: var(--st-confirmed);
+  --st-bg: var(--st-confirmed-bg);
+}
+[data-status='false_positive'] {
+  --st: var(--st-false);
+  --st-bg: var(--st-false-bg);
+}
+[data-status='closed'] {
+  --st: var(--st-closed);
+  --st-bg: var(--st-closed-bg);
+}
